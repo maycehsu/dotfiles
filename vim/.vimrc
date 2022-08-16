@@ -73,8 +73,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'iberianpig/tig-explorer.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Plugin 'airblade/vim-gitgutter'
-Plugin 'ryanoasis/vim-devicons'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'wookayin/fzf-ripgrep.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -112,10 +113,12 @@ nnoremap <silent> <F2> :Buffers<CR>
 nnoremap <silent> <F3> :cw<CR>
 nnoremap <silent> <F4> :ccl<CR>
 nnoremap <silent> <F9> :History<CR>
+nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> <F10> :tabe<CR>
 nnoremap <silent> <F11> :tabp<CR>
 nnoremap <silent> <F12> :tabn<CR>
 nnoremap <silent> - :NERDTreeToggle<CR>
+nnoremap <silent> _ :NERDTreeFind<CR>
 
 map <C-n> <Esc>:tabnew %<CR>
 " autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
@@ -131,17 +134,17 @@ endif
 set fileencodings=ucs-bom,gb18030,utf-8,default
 
 
-function! LoadCscope()
-	let db = findfile("cscope.out", ".;")
-	if (!empty(db))
-		let path = strpart(db, 0, match(db, "/cscope.out$"))
-		set nocscopeverbose " suppress 'duplicate connection' error
-		exe "cs add " . db . " " . path
-		set cscopeverbose
+"function! LoadCscope()
+"	let db = findfile("cscope.out", ".;")
+"	if (!empty(db))
+"		let path = strpart(db, 0, match(db, "/cscope.out$"))
+"		set nocscopeverbose " suppress 'duplicate connection' error
+"		exe "cs add " . db . " " . path
+"		set cscopeverbose
 	"else add the database pointed to by environment variable 
-	elseif $CSCOPE_DB != "" 
-		cs add $CSCOPE_DB
-	endif
-endfunction
-au BufEnter /* call LoadCscope()
+"	elseif $CSCOPE_DB != "" 
+"		cs add $CSCOPE_DB
+"	endif
+"endfunction
+"au BufEnter /* call LoadCscope()
 
