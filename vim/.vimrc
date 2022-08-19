@@ -16,6 +16,7 @@ set ignorecase
 set statusline=[%{expand('%:p')}][%{strlen(&fenc)?&fenc:&enc},\ %{&ff},\ %{strlen(&filetype)?&filetype:'plain'}]%{FileSize()}%{IsBinary()}%=%c,%l/%L\ [%3p%%]
 set laststatus=2
 set conceallevel=3
+syntax on
 
 
 hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
@@ -73,6 +74,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'iberianpig/tig-explorer.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'wookayin/fzf-ripgrep.vim'
