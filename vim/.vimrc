@@ -9,7 +9,6 @@ set cursorline
 set hlsearch
 set incsearch
 set cindent
-hi CursorLine cterm=none ctermbg=DarkMagenta ctermfg=White
 hi Search cterm=reverse ctermbg=none ctermfg=none
 set ignorecase
 
@@ -22,6 +21,7 @@ syntax on
 hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
 " hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
 hi CursorLineNr cterm=none ctermfg=DarkMagenta ctermbg=White
+hi CursorLine cterm=none ctermbg=DarkMagenta ctermfg=White
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 
