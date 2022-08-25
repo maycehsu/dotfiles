@@ -10,6 +10,16 @@
 	editor = vim
 [alias]
 	co = checkout
-	br = branch
-	ci = commit
+	br = branch -av
+	ci = commit -a -v
 	st = status
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	last = log -1 HEAD
+	pl = pull --rebase
+	ls = diff-tree --no-commit-id --name-only -r
+[color]
+	status = auto
+	diff = auto
+	ui = true
+	branch = auto
+	log = auto

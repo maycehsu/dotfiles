@@ -136,6 +136,9 @@ if has("multi_byte")
 endif
 set fileencodings=ucs-bom,gb18030,utf-8,default
 
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 "function! LoadCscope()
 "	let db = findfile("cscope.out", ".;")
