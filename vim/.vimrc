@@ -78,6 +78,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'wookayin/fzf-ripgrep.vim'
+Plugin 'will133/vim-dirdiff'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
