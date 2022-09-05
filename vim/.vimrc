@@ -76,7 +76,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-scripts/taglist.vim'
+"Plugin 'vim-scripts/taglist.vim'
 Plugin 'wookayin/fzf-ripgrep.vim'
 Plugin 'will133/vim-dirdiff'
 
@@ -116,7 +116,7 @@ nnoremap <silent> <F2> :Buffers<CR>
 nnoremap <silent> <F3> :cw<CR>
 nnoremap <silent> <F4> :ccl<CR>
 nnoremap <silent> <F9> :History<CR>
-nnoremap <silent> <F8> :TlistToggle<CR>
+"nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> <F10> :tabe<CR>
 nnoremap <silent> <F11> :tabp<CR>
 nnoremap <silent> <F12> :tabn<CR>
