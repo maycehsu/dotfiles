@@ -48,16 +48,16 @@ bind K kill
 bind I login on
 bind O login off
 bind } history
-bindkey ^[1 select 1
-bindkey ^[2 select 2
-bindkey ^[3 select 3
-bindkey ^[4 select 4
-bindkey ^[5 select 5
-bindkey ^[6 select 6
-bindkey ^[7 select 7
-bindkey ^[8 select 8
-bindkey ^[9 select 9
-bindkey ^[0 select 0
+#bindkey ^[1 select 1
+#bindkey ^[2 select 2
+#bindkey ^[3 select 3
+#bindkey ^[4 select 4
+#bindkey ^[5 select 5
+#bindkey ^[6 select 6
+#bindkey ^[7 select 7
+#bindkey ^[8 select 8
+#bindkey ^[9 select 9
+#bindkey ^[0 select 0
 bindkey ^[1 number -1 # move window to left
 bindkey ^[2 number +1 # move window to right
 bindkey ^[z prev #ctrl + left   , move to previous window
