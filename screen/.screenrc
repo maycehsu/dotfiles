@@ -138,3 +138,7 @@ caption always "%{wK}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wK}%?%+Lw%? %= %{= Kw}%110`%
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defencoding UTF-8
 encoding UTF-8 UTF-8
+
+logfile log/screenlog-%S-%t-%n-%Y%m%d-%c%s.log
+logtstamp on
+logtstamp after 5
