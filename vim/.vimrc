@@ -1,5 +1,6 @@
 set nu
-set tabstop=4
+"set tabstop=4
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set shiftwidth=4
 
 " Color configuration
@@ -135,7 +136,7 @@ set diffopt+=vertical
 if has("multi_byte")
 	set encoding=utf8
 endif
-set fileencodings=ucs-bom,gb18030,utf-8,default
+set fileencodings=ucs-bom,utf-8,default
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
