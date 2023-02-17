@@ -123,6 +123,9 @@ nnoremap <silent> <F11> :tabp<CR>
 nnoremap <silent> <F12> :tabn<CR>
 nnoremap <silent> - :NERDTreeToggle<CR>
 nnoremap <silent> _ :NERDTreeFind<CR>
+nmap <Leader>T :tab term ++close<cr>
+tmap <Leader>T <c-w>N<cr>
+"imap <Leader>t <c-w>N<cr>
 
 map <C-n> <Esc>:tabnew %<CR>
 " autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
