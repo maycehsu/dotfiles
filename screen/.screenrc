@@ -104,7 +104,8 @@ termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 # following termcapinfo line which tells xterm to use the normal screen buffer
 # (which has scrollback), not the alternate screen buffer.
 #
-termcapinfo xterm|xterms|xs|rxvt ti@:te@
+#termcapinfo xterm|xterms|xs|rxvt ti@:te@
+termcapinfo xterm* ti@:te@
 
 # Enable non-blocking mode to better cope with flaky ssh connections.
 defnonblock 5
@@ -136,6 +137,7 @@ caption always "%{wK}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wK}%?%+Lw%? %= %{= Kw}%110`%
 
 
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defutf8 on
 defencoding UTF-8
 encoding UTF-8 UTF-8
 
