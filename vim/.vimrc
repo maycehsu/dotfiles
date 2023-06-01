@@ -16,6 +16,7 @@ set ignorecase
 set statusline=[%{expand('%:p')}][%{strlen(&fenc)?&fenc:&enc},\ %{&ff},\ %{strlen(&filetype)?&filetype:'plain'}]%{FileSize()}%{IsBinary()}%=%c,%l/%L\ [%3p%%]
 set laststatus=2
 set conceallevel=3
+let g:vim_json_conceal=0
 syntax on
 
 
@@ -80,6 +81,7 @@ Plugin 'airblade/vim-gitgutter'
 "Plugin 'vim-scripts/taglist.vim'
 Plugin 'wookayin/fzf-ripgrep.vim'
 Plugin 'will133/vim-dirdiff'
+Plugin 'powerman/vim-plugin-AnsiEsc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
