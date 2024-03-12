@@ -23,3 +23,5 @@
 	ui = true
 	branch = auto
 	log = auto
+[init]
+	defaultBranch = master
