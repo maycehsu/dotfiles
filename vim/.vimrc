@@ -86,6 +86,7 @@ Plugin 'powerman/vim-plugin-AnsiEsc'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'mechatroner/rainbow_csv'
+"Plugin 'azabiong/vim-highlighter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -156,6 +157,7 @@ let g:gitgutter_sign_column_always = 1
 let g:gitgutter_eager = 0
 set diffopt+=vertical
 "set foldmethod=syntax
+let NERDTreeShowHidden=1
 
 
 if has("multi_byte")

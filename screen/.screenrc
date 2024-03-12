@@ -66,6 +66,8 @@ bindkey ^[b number -1 # move window to left (mac iterm2 shift + left)
 bindkey ^[f number +1 # move window to right (mac iterm2 shift + right)
 bindkey ^[z prev #ctrl + left   , move to previous window
 bindkey ^[x next # ctrl+ right , move to next window
+bindkey ^[[1;2D number -1 # move window left (mac iterm2 shift + left)
+bindkey ^[[1;2C number +1 # move window right (mac iterm2 shift + right) use sudo showkey
 
 # An example of a "screen scraper" which will launch urlview on the current
 # screen window
