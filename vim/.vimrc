@@ -1,6 +1,7 @@
 set nu
 "set tabstop=4
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set listchars=tab:▷▷:
 set shiftwidth=4
 
 " Color configuration
@@ -82,6 +83,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'wookayin/fzf-ripgrep.vim'
 Plugin 'will133/vim-dirdiff'
 Plugin 'powerman/vim-plugin-AnsiEsc'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'mechatroner/rainbow_csv'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -127,10 +131,26 @@ nnoremap <silent> - :NERDTreeToggle<CR>
 nnoremap <silent> _ :NERDTreeFind<CR>
 nmap <Leader>T :tab term ++close<cr>
 tmap <Leader>T <c-w>N<cr>
-"imap <Leader>t <c-w>N<cr>
-
+nmap <Leader>P :! clear; python3 %<cr>
 map <C-n> <Esc>:tabnew %<CR>
-" autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
+
+" for copilot
+" allow for gitcommit, markdown and yaml
+let g:copilot_filetypes = {
+    \ 'gitcommit': v:true,
+    \ 'markdown': v:true,
+    \ 'yaml': v:true
+    \ }
+" disable copilot for large files
+autocmd BufReadPre *
+     \ let f=getfsize(expand("<afile>"))
+     \ | if f > 100000 || f == -2
+     \ | let b:copilot_enabled = v:false
+     \ | endif
+" maps for copilot for next, previous and dismiss
+imap <silent> <C-j> <Plug>(copilot-next)
+imap <silent> <C-k> <Plug>(copilot-previous)
+
 
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_eager = 0
@@ -147,17 +167,4 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-"function! LoadCscope()
-"	let db = findfile("cscope.out", ".;")
-"	if (!empty(db))
-"		let path = strpart(db, 0, match(db, "/cscope.out$"))
-"		set nocscopeverbose " suppress 'duplicate connection' error
-"		exe "cs add " . db . " " . path
-"		set cscopeverbose
-	"else add the database pointed to by environment variable 
-"	elseif $CSCOPE_DB != "" 
-"		cs add $CSCOPE_DB
-"	endif
-"endfunction
-"au BufEnter /* call LoadCscope()
 
